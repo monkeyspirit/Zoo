@@ -23,5 +23,5 @@ INSERT INTO `animale` (`ID`, `NOME`, `SPECIE`, `HABITAT`, `PESO`, `ETA`, `SESSO`
 
 
 INSERT INTO `risiede` (`ID_ANIMALE`, `NUMERO`, `last_update`) VALUES
-('MC001', 1, '2019-05-29 09:38:41'),
-('MC002', 1, '2019-05-29 09:38:55');
+('MC001', 'Oasi dei Ghepardi', '2019-05-29 09:38:41'),
+('MC002', 'Oasi dei Ghepardi', '2019-05-29 09:38:55');
