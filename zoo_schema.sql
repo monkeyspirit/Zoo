@@ -11,7 +11,7 @@ CREATE TABLE AREA_TEMATICA (
 CREATE TABLE ALLOGGIO (
 	NUMERO INT NOT NULL,
 	NOME  VARCHAR(40) NOT NULL,
-	TIPO  VARCHAR(40),
+	TIPO  enum ('Recinto basso', 'Recinto alto', 'Vasca', 'Teca', 'Prato') NOT NULL,
 	NOME_AREA  VARCHAR(20)  NOT NULL,
 	last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	PRIMARY KEY (NUMERO),
@@ -22,14 +22,16 @@ CREATE TABLE ANIMALE (
 	ID VARCHAR(10) NOT NULL, 
 	NOME VARCHAR(20),
 	SPECIE VARCHAR(30) NOT NULL,
-	HABITAT enum('Calotta polare','Tundra','Taiga','Foresta decidua','Steppa e prateria','Foresta pluviale temperata','Foresta pluviale tropicale','Macchia mediterranea','Giungla','Deserto sabbioso','Deserto roccioso','Deserto semiarido','Steppa arida','Savana erbosa','Savana alberata','Foresta subtropicale secca','Tundra alpina','Vegetazione alpina') DEFAULT NULL,
+	HABITAT enum('Calotta polare','Tundra','Taiga','Foresta','Prateria','Foresta pluviale','Macchia mediterranea','Giungla','Deserto','Steppa','Savana','Foresta subtropicale','Vegetazione alpina'),
 	PESO INT UNSIGNED,
 	ETA INT UNSIGNED, 	
 	SESSO ENUM('M', 'F'),
 	last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 PRIMARY KEY (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-	
+
+
+  
 CREATE TABLE MALATTIA (
 	ID INT NOT NULL,
 	ID_ANIMALE VARCHAR(10) NOT NULL,
