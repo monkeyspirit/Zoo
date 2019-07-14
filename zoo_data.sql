@@ -40,6 +40,14 @@ INSERT INTO `ANIMALE` (`ID`, `NOME`, `SPECIE`,`HABITAT`, `PESO`, `ETA`, `SESSO`,
 ('232','Kayden','Panda','Tundra','97295','5','M','2019-06-18 17:12:45'),
 ('242','Carlo','Leone','Foresta','484567437','6','F','2019-06-18 17:12:45');
 
+INSERT INTO `MALATTIA` (`ID`, `ID_ANIMALE`, `TIPO`,`last_update`) VALUES 
+('PXE', '033', 'virus','2019-05-29 07:34:55'),
+('EQW', '133', 'batterio','2019-05-29 07:34:55'),
+('SDA', '230', 'fungo','2019-05-29 07:34:55'),
+('SDA', '232', 'fungo','2019-05-29 07:34:55'),
+('OPL', '127', 'virus','2019-05-29 07:34:55'),
+('PXE', '099', 'virus','2019-05-29 07:34:55');
+
 INSERT INTO `DIETA` (`ID`, `last_update`) VALUES
 ('1', '2019-05-29 07:34:55'),
 ('2', '2019-05-29 07:34:55'),
