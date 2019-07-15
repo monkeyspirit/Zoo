@@ -8,6 +8,8 @@ INSERT INTO `area_tematica` (`NOME`, `last_update`) VALUES
 ('America', '2019-05-29 09:37:28');
 
 INSERT INTO `ALLOGGIO` (`NUMERO`, `NOME`, `TIPO`,`NOME_AREA`, `last_update`) VALUES 
+('1','Squali cattivi','Vasca','Oceania','2019-06-18 17:24:21'),
+('1','Montagne dello Utah','Recinto alto','America','2019-06-18 17:24:21'),
 ('1','Appennini','Recinto alto','Europa','2019-06-18 17:24:21'),
 ('2','Alpi','Recinto alto','Europa','2019-06-18 17:24:21'),
 ('3','Casa dei Panda','Recinto basso','Asia','2019-06-18 17:24:21'),
@@ -19,10 +21,12 @@ INSERT INTO `ALLOGGIO` (`NUMERO`, `NOME`, `TIPO`,`NOME_AREA`, `last_update`) VAL
 ('9','Grandi laghi europei','Vasca','Europa','2019-06-18 17:24:21'),
 ('10','Vita nella savana','Prato','Africa','2019-06-18 17:24:21'),
 ('11','Paludi della Luisiana','Vasca','America','2019-06-18 17:24:21'),
+('11','Ragni velenosi','Teca','Oceania','2019-06-18 17:24:21'),
 ('12','Corsa con gli struzzi','Recinto alto','Oceania','2019-06-18 17:24:21'),
 ('13','Montagne innevate','Recinto alto','Asia','2019-06-18 17:24:21'); 
 
 INSERT INTO `ANIMALE` (`ID`, `NOME`, `SPECIE`,`HABITAT`, `PESO`, `ETA`, `SESSO`, `last_update`) VALUES 
+('001','Nemo','Squalo','Tundra','299','8','F','2019-06-18 17:12:45'),
 ('033','Brant','Coccodrillo','Tundra','24','8','M','2019-06-18 17:12:45'),
 ('099','Eleazar','Gufo','Foresta','706','9','F','2019-06-18 17:12:45'),
 ('104','Fannie','Coccodrillo','Prateria','808','4','F','2019-06-18 17:12:45'),
@@ -38,15 +42,19 @@ INSERT INTO `ANIMALE` (`ID`, `NOME`, `SPECIE`,`HABITAT`, `PESO`, `ETA`, `SESSO`,
 ('217','Rosa','Gufo','Foresta subtropicale','25','3','F','2019-06-18 17:12:45'),
 ('230','Elise','Elefante','Foresta subtropicale','470645159','6','M','2019-06-18 17:12:45'),
 ('232','Kayden','Panda','Tundra','97295','5','M','2019-06-18 17:12:45'),
-('242','Carlo','Leone','Foresta','484567437','6','F','2019-06-18 17:12:45');
+('242','Carlo','Leone','Foresta','484567437','6','F','2019-06-18 17:12:45'),
+('422','Giovanni','Muflone','Vegetazione alpina','200','33','M','2019-06-18 17:12:45');
 
 INSERT INTO `MALATTIA` (`ID`, `ID_ANIMALE`, `TIPO`,`last_update`) VALUES 
-('PXE', '033', 'virus','2019-05-29 07:34:55'),
-('EQW', '133', 'batterio','2019-05-29 07:34:55'),
-('SDA', '230', 'fungo','2019-05-29 07:34:55'),
-('SDA', '232', 'fungo','2019-05-29 07:34:55'),
-('OPL', '127', 'virus','2019-05-29 07:34:55'),
-('PXE', '099', 'virus','2019-05-29 07:34:55');
+(0, '001', 'virus','2019-05-29 07:34:55'),
+(1, '422', 'virus','2019-05-29 07:34:55'),
+(2, '127', 'virus','2019-05-29 07:34:55'),
+(3, '033', 'virus','2019-05-29 07:34:55'),
+(4, '133', 'batterio','2019-05-29 07:34:55'),
+(5, '230', 'fungo','2019-05-29 07:34:55'),
+(6, '232', 'fungo','2019-05-29 07:34:55'),
+(7, '127', 'virus','2019-05-29 07:34:55'),
+(8, '099', 'virus','2019-05-29 07:34:55');
 
 INSERT INTO `DIETA` (`ID`, `last_update`) VALUES
 ('1', '2019-05-29 07:34:55'),
@@ -131,7 +139,9 @@ INSERT INTO `CIBO` (`ID`, `NOME`, `DATA_SCADENZA`, `QUANTITA`, `last_update`) VA
 ('9059959892', 'Funghi', '2021-12-29', 40, '2019-06-18 10:44:23'),
 ('6288686670', 'Salmone', '2022-04-14',16, '2019-06-18 10:44:23');
 
-INSERT INTO `risiede` (`ID_ANIMALE`, `NUMERO`, `NOME_AREA`, `last_update`) VALUES 
+INSERT INTO `risiede` (`ID_ANIMALE`, `NUMERO`, `NOME_AREA`, `last_update`) VALUES
+('422', '1', 'America', '2019-06-18 10:44:23'),
+('001', '1', 'Oceania', '2019-06-18 10:44:23'), 
 ('033', '11', 'America', '2019-06-18 10:44:23'),
 ('099', '2', 'Europa', '2019-06-18 10:44:23'), 
 ('104', '11', 'America', '2019-06-18 10:44:23'), 
